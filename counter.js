@@ -1,19 +1,22 @@
 let сount = 0;
 const output = document.getElementById("count");
-
-document.getElementById("increment").onclick = () => {
+function increment(){
   count++;
   output.textContent = count;
 };
-
-document.getElementById("decrement").onclick = () => {
+ 
+ function decrement(){
   count--;
   if (count < 0) {
     count = 0;
 };
 output.textContent = count;
 }
-document.getElementById("reset").onclick = () => {
+
+function reset(){
   count = 0;
   output.textContent = count;
 };
+document.getElementById("increment").onclick = increment;
+document.getElementById("decrement").onclick = decrement;
+document.getElementById("reset").onclick = reset;
